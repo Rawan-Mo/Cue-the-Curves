@@ -1,6 +1,6 @@
 # cue_the_curves
 
-A new Flutter project.
+This is Cue the Curves mobile application made using Flutter.
 
 ## Getting Started
 
