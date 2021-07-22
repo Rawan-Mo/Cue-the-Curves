@@ -1,4 +1,4 @@
-# cue_the_curves
+# Cue the Curves
 
 A new Flutter project.
 
