@@ -1,6 +1,7 @@
-import 'package:cue_the_curves/components/text_field_container.dart';
-import 'package:cue_the_curves/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../constants.dart';
+import 'text_field_container.dart';
 
 class RoundedInputField extends StatelessWidget {
   final String hintText;

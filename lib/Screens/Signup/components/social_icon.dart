@@ -1,6 +1,7 @@
-import 'package:cue_the_curves/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../constants.dart';
 
 class SocialIcon extends StatelessWidget {
   final String iconSrc;

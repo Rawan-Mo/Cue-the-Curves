@@ -1,10 +1,11 @@
-import 'package:cue_the_curves/Screens/Login/components/background.dart';
 import 'package:cue_the_curves/Screens/Signup/signup_screen.dart';
 import 'package:cue_the_curves/components/already_have_an_account_check.dart';
 import 'package:cue_the_curves/components/rounded_button.dart';
 import 'package:cue_the_curves/components/rounded_input_field.dart';
 import 'package:cue_the_curves/components/rounded_password_field.dart';
 import 'package:flutter/material.dart';
+
+import 'background.dart';
 
 class Body extends StatelessWidget {
   const Body({

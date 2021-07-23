@@ -1,5 +1,6 @@
-import 'package:cue_the_curves/Screens/Signup/components/body.dart';
 import 'package:flutter/material.dart';
+
+import 'components/body.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override

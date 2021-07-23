@@ -1,6 +1,7 @@
-import 'package:cue_the_curves/Screens/Welcome/welcome_screen.dart';
-import 'package:cue_the_curves/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'Screens/Welcome/welcome_screen.dart';
+import 'constants.dart';
 
 
 void main() => runApp(MyApp());

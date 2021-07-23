@@ -1,12 +1,14 @@
+
 import 'package:cue_the_curves/Screens/Login/login_screen.dart';
-import 'package:cue_the_curves/Screens/Signup/components/background.dart';
-import 'package:cue_the_curves/Screens/Signup/components/or_divider.dart';
-import 'package:cue_the_curves/Screens/Signup/components/social_icon.dart';
 import 'package:cue_the_curves/components/already_have_an_account_check.dart';
 import 'package:cue_the_curves/components/rounded_button.dart';
 import 'package:cue_the_curves/components/rounded_input_field.dart';
 import 'package:cue_the_curves/components/rounded_password_field.dart';
 import 'package:flutter/material.dart';
+
+import 'background.dart';
+import 'or_divider.dart';
+import 'social_icon.dart';
 
 class Body extends StatelessWidget {
   @override
