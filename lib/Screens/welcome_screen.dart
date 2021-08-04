@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import 'signup_screen.dart';
 import 'login_screen.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'signup_screen.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
@@ -53,15 +54,7 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {
-                Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: SignupScreen()));
-                /*
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SignupScreen(),
-                  ),
-                );
-                */
+                Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: SignUpScreen()));
               },
             ),
           ],
