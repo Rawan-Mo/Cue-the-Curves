@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'Screens/Welcome/welcome_screen.dart';
 import 'constants.dart';
+
+import 'Screens/welcome_screen.dart';
 
 
 void main() => runApp(MyApp());
