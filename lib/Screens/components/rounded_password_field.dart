@@ -35,17 +35,16 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
             Icons.lock,
             color: kPrimaryColor,
           ),
-          suffixIcon: 
-          
-          new GestureDetector(
-          onTap: () {
-            setState(() {
-              _obscureText = !_obscureText;
-            });
-          },
-          child:
-            new Icon(_obscureText ? Icons.visibility : Icons.visibility_off,
-            color: kPrimaryColor,),
+          suffixIcon: new GestureDetector(
+            onTap: () {
+              setState(() {
+                _obscureText = !_obscureText;
+              });
+            },
+            child:
+              new Icon(_obscureText ? Icons.visibility : Icons.visibility_off,
+              color: kPrimaryColor,
+              ),
           ),
         ),
       ),

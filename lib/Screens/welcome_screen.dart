@@ -26,7 +26,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            OutlinedText(text: "Welcome to: \n Cue the Curves", fontSize: 40),
+            OutlinedText(text: "Welcome to \n Cue the Curves", fontSize: 40),
             SizedBox(height: size.height * 0.05),
             Image.asset(
               WelcomeLogo,
