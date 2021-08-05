@@ -49,12 +49,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets: 
-    - assets\icons\Facebook.svg
-    - assets\icons\Google.svg
-    - assets\icons\Twitter.svg
-    - assets\images\CTCLogo.png
-    - assets\images\LoginLogo.png
-    - assets\images\main_top.png
+    - assets/icons/Facebook.svg
+    - assets/icons/Google.svg
+    - assets/icons/Twitter.svg
+    - assets/images/CTC_Logo.png
+    - assets/images/Login_Logo.png
+    - assets/images/main_top.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -4,6 +4,7 @@ import 'login_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'signup_screen.dart';
+import 'components/outlined_text.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
@@ -25,28 +26,18 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "WELCOME TO Cue the Curves",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
+            OutlinedText(text: "Welcome to: \n Cue the Curves", fontSize: 40),
             SizedBox(height: size.height * 0.05),
             Image.asset(
               WelcomeLogo,
-              height: size.height * 0.45,
+              height: size.height * 0.40,
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
               text: "LOGIN",
+              textColor: Colors.black,
               press: () {
                 Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: LoginScreen()));
-                /*
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
-                  ),
-                );
-                */
               },
             ),
             RoundedButton(

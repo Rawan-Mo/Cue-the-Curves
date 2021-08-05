@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-
+import 'package:cue_the_curves/Screens/home_page.dart';
 import 'components/already_have_an_account_check.dart';
 import 'components/or_divider.dart';
 import 'components/rounded_button.dart';
@@ -8,11 +8,16 @@ import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 import 'components/social_icon.dart';
 import 'login_screen.dart';
+import 'components/outlined_text.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(''),
+        backgroundColor: Colors.white,
+      ),
       body: Body(),
     );
   }
@@ -29,21 +34,36 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Create your account",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
+            OutlinedText(text: "Sign Up", fontSize: 40),
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
-              hintText: "Your Email",
+              hintText: "First Name",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Last Name",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Email",
               onChanged: (value) {},
             ),
             RoundedPasswordField(
               onChanged: (value) {},
+              text: "Password",
+            ),
+            RoundedPasswordField(
+              onChanged: (value) {},
+              text: "Confirm Password",
             ),
             RoundedButton(
-              text: "SIGNUP",
-              press: () {},
+              text: "SIGN UP",
+              textColor: Colors.black,
+              press: () {
+                Navigator.push(
+                  context, PageTransition(type: PageTransitionType.fade, child: HomePage())
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(

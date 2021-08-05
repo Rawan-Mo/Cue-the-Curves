@@ -1,3 +1,4 @@
+import 'package:cue_the_curves/Screens/home_page.dart';
 import 'package:cue_the_curves/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -6,12 +7,17 @@ import 'components/rounded_button.dart';
 import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 import 'signup_screen.dart';
+import 'components/outlined_text.dart';
 
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(''),
+        backgroundColor: Colors.white,
+      ),
       body: Body(),
     );
   }
@@ -31,26 +37,32 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: size.height * 0.03),
+            
+            //SizedBox(height: size.height * 0.03),
             Image.asset(
               Logo,
-              height: size.height * 0.35,
+              height: size.height * 0.30,
             ),
+            SizedBox(height: size.height * 0.07),
+            OutlinedText(text: "Login", fontSize: 40),
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
-              hintText: "Your Email",
+              hintText: "Email",
               onChanged: (value) {},
             ),
             RoundedPasswordField(
               onChanged: (value) {},
+              text: "Password",
             ),
+            
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              textColor: Colors.black,
+              press: () {
+                Navigator.push(
+                  context, PageTransition(type: PageTransitionType.fade, child: HomePage())
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
