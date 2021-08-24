@@ -12,6 +12,7 @@ import 'components/outlined_text.dart';
 import '../../constants.dart';
 import 'components/text_field_container.dart';
 import 'components/validators.dart';
+import 'package:flutter_password_strength/flutter_password_strength.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -32,8 +33,6 @@ class Body extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    TextEditingController firstNameController = TextEditingController();
-    TextEditingController lastNameController = TextEditingController();
     TextEditingController emailController = TextEditingController();
     TextEditingController passController = TextEditingController();
     TextEditingController confirmPassController = TextEditingController();
@@ -72,55 +71,8 @@ class Body extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              OutlinedText(text: "Sign Up", fontSize: 40),
+              OutlinedText(text: "Sign Up", fontSize: 50),
               SizedBox(height: size.height * 0.03),
-              RoundedInputField(
-                hintText: "First Name",
-                onChanged: (value) => firstNameController.text = value,
-                validator: emptyVal
-              ),
-              
-              RoundedInputField(
-                hintText: "Last Name",
-                onChanged: (value) => lastNameController.text = value,
-                validator: emptyVal
-              ),
-              RoundedInputField(
-                hintText: "Email",
-                onChanged: (value) => emailController.text = value,
-                validator: emailVal
-              ),
-              RoundedPasswordField(
-                onChanged: (value) => passController.text = value,
-                validator: passVal,
-                text: "Password",
-              ),
-              RoundedPasswordField(
-                onChanged: (value) => confirmPassController.text = value,
-                validator: confirmPassVal,
-                text: "Confirm Password",
-              ),
-              RoundedButton(
-                text: "SIGN UP",
-                textColor: Colors.black,
-                press: () {
-                    if (_formKey.currentState!.validate()) {
-                      Navigator.push(
-                        context, PageTransition(type: PageTransitionType.fade, child: HomePage())
-                      );
-                    }
-                },
-              ),
-              SizedBox(height: size.height * 0.02),
-              AlreadyHaveAnAccountCheck(
-                login: false,
-                press: () {
-                  Navigator.push(
-                    context, PageTransition(type: PageTransitionType.fade, child: LoginScreen())
-                  );
-                },
-              ),
-              OrDivider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -137,7 +89,59 @@ class Body extends StatelessWidget {
                     press: () {},
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: size.height * 0.01),
+              OrDivider(),
+              RoundedInputField(
+                hintText: "Email",
+                onChanged: (value) => emailController.text = value,
+                validator: emailVal
+              ),
+              RoundedPasswordField(
+                onChanged: (value) => {
+                  passController.text = value,
+                },
+                validator: passVal,
+                text: "Password",
+              ),
+              RoundedPasswordField(
+                onChanged: (value) {
+                  confirmPassController.text = value;
+                },
+                validator: confirmPassVal,
+                text: "Confirm Password",
+              ),
+              /*
+              FlutterPasswordStrength(
+                password: passController.text, 
+                width: 300,
+                strengthCallback: (strength){
+                  debugPrint(strength.toString());
+                }
+              ),
+              */
+              //Text(passController.text),
+              RoundedButton(
+                text: "SIGN UP",
+                textColor: Colors.black,
+                press: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.push(
+                      context, PageTransition(type: PageTransitionType.fade, child: HomePage())
+                    );
+                  }
+                },
+              ),
+              SizedBox(height: size.height * 0.02),
+              AlreadyHaveAnAccountCheck(
+                login: false,
+                press: () {
+                  Navigator.push(
+                    context, PageTransition(type: PageTransitionType.fade, child: LoginScreen())
+                  );
+                },
+              ),
+              SizedBox(height: size.height * 0.12),
             ],
           ),
         ),

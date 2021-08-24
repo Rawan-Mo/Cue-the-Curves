@@ -29,7 +29,7 @@ class _RoundedInputField extends State<RoundedInputField> {
       child: TextFormField(
         onChanged: widget.onChanged, 
         cursorColor: kPrimaryColor,
-        decoration: InputDecoration(   
+        decoration: InputDecoration(
           //enabledBorder: UnderlineInputBorder(borderSide: BorderSide(width: 3, color: kPrimaryColor)),
           focusedBorder: UnderlineInputBorder(borderSide: BorderSide(width: 3, color: kPrimaryColor)),
           border: InputBorder.none,
@@ -38,13 +38,9 @@ class _RoundedInputField extends State<RoundedInputField> {
             color: kPrimaryColor,
           ),
           hintText: widget.hintText,
-          
-
         ),
         validator: widget.validator,
       ),
-
-
     );
   }
 }

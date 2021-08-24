@@ -9,6 +9,8 @@ import 'components/rounded_password_field.dart';
 import 'signup_screen.dart';
 import 'components/outlined_text.dart';
 import 'components/validators.dart';
+import 'components/or_divider.dart';
+import 'components/social_icon.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -42,14 +44,33 @@ class Body extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              //SizedBox(height: size.height * 0.03),
+              /*
               Image.asset(
                 Logo,
                 height: size.height * 0.29,
               ),
+              */
+              OutlinedText(text: "Login", fontSize: 50),
               SizedBox(height: size.height * 0.03),
-              OutlinedText(text: "Login", fontSize: 40),
-              SizedBox(height: size.height * 0.03),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SocialIcon(
+                    iconSrc: "assets/icons/Facebook.svg",
+                    press: () {},
+                  ),
+                  SocialIcon(
+                    iconSrc: "assets/icons/Twitter.svg",
+                    press: () {},
+                  ),
+                  SocialIcon(
+                    iconSrc: "assets/icons/Google.svg",
+                    press: () {},
+                  ),
+                ],
+              ),
+              SizedBox(height: size.height * 0.01),
+              OrDivider(),
               RoundedInputField(
                 hintText: "Email",
                 onChanged: (value) => emailController.text = value,
@@ -64,11 +85,11 @@ class Body extends StatelessWidget {
                 text: "LOGIN",
                 textColor: Colors.black,
                 press: () {
-                    if (_formKey.currentState!.validate()) {
-                      Navigator.push(
-                        context, PageTransition(type: PageTransitionType.fade, child: HomePage())
-                      );
-                    }
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.push(
+                      context, PageTransition(type: PageTransitionType.fade, child: HomePage())
+                    );
+                  }
                 },
               ),
               SizedBox(height: size.height * 0.02),
